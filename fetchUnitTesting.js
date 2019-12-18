@@ -4,13 +4,11 @@ window.onload = function () {
   getApi();
 }
 
-const getApi = () => {
-  fetch (`https://api.punkapi.com/v2/beers?page=2&per_page=80`)
+const getApi = (fetch) => {
+  return fetch (`https://api.punkapi.com/v2/beers?page=2&per_page=80`)
   .then(res => res.json())
   .then(beer => beerArr = beer)
 }
-
-console.log(beerArr);
 
 const clicked = () => {
   console.log('click click click');
@@ -31,7 +29,9 @@ const clicked = () => {
 //building two tests for this simple app; 1 for a single beer and 1 for 10 beers.
 
 describe ('fnx', () => {
-  it ('pulls in 1 ')
+  it ('works in the basic case', () => {
+    
+  })
 })
 
 //You should end up with a simple GUI app that has at least two unit test 
